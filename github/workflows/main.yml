@@ -1,0 +1,23 @@
+name: Learning using cron on github action
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: "5 * * * *"
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  scrape-imdb:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: 21f3000745@ds.study.ac.in
+        run: | # python
